@@ -1,12 +1,12 @@
 # VERSION 0.0.1
 # AUTHOR: pyjaime
-# DESCRIPTION: Airflow container with JAVA 8 and SPARK binaries
+# DESCRIPTION: Airflow container with JAVA 17 and SPARK binaries
 # BUILD: docker build --rm -t docker-airflow2:latest .
 # BASED ON: https://github.com/puckel/docker-airflow
 #      AND: https://github.com/cordon-thiago/airflow-spark/
 
-# stretch debian version allows JAVA JDK 8
-FROM python:3.7-stretch
+# bullseye debian version allows JAVA JDK 17
+FROM python:3.7-bullseye
 LABEL maintainer=pyjaime
 
 # Never prompts the user for choices on installation/configuration of packages
@@ -55,6 +55,7 @@ RUN set -ex \
         locales \
         iputils-ping \
         telnet \
+        libpq-dev \
     && sed -i 's/^# en_US.UTF-8 UTF-8$/en_US.UTF-8 UTF-8/g' /etc/locale.gen \
     && locale-gen \
     && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 \
@@ -63,9 +64,10 @@ RUN set -ex \
     && pip install pytz \
     && pip install pyOpenSSL \
     && pip install ndg-httpsclient \
+    && pip install psycopg2-binary \
     && pip install pyasn1 \
     && pip install -r requirements.txt \
-    && pip install --use-feature=2020-resolver apache-airflow[crypto,celery,postgres,hive,jdbc,mysql,ssh${AIRFLOW_DEPS:+,}${AIRFLOW_DEPS}]==${AIRFLOW_VERSION} \
+    && pip install apache-airflow[crypto,celery,postgres,hive,jdbc,mysql,ssh${AIRFLOW_DEPS:+,}${AIRFLOW_DEPS}]==${AIRFLOW_VERSION} \
     && pip install apache-airflow-providers-apache-spark \
     && pip install redis \
     && if [ -n "${PYTHON_DEPS}" ]; then pip install ${PYTHON_DEPS}; fi \
@@ -85,20 +87,15 @@ RUN set -ex \
 ## Begin JAVA installation
 
 # Java is required in order to spark-submit work
-# Install OpenJDK-8
+# Install OpenJDK-17
 RUN apt-get update && \
-    apt-get install -y software-properties-common && \
-    apt-get install -y gnupg2 && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB9B1D8886F44E2A && \
-    add-apt-repository "deb http://security.debian.org/debian-security stretch/updates main" && \ 
-    apt-get update && \
-    apt-get install -y openjdk-8-jdk && \
+    apt-get install -y openjdk-17-jdk && \
     pip freeze && \
-    java -version $$ \
+    java -version && \
     javac -version
 
-# Setup JAVA_HOME 
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+# Setup JAVA_HOME
+ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
 RUN export JAVA_HOME
 
 ## Finished JAVA installation
@@ -134,4 +131,4 @@ EXPOSE 8080 5555 8793
 USER airflow
 WORKDIR ${AIRFLOW_HOME}
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["webserver"] # set default arg for entrypoint
+CMD ["webserver"]

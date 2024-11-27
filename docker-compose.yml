@@ -17,7 +17,7 @@ services:
 
     # Airflow LocalExecutor
     airflow-webserver:
-        image: docker-airflow2:latest
+        image: docker-airflow4:latest
         restart: always
         networks:
             - default_net
@@ -74,6 +74,7 @@ services:
             - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
             - SPARK_SSL_ENABLED=no
         volumes:
+            - ../sandbox/spark/conf:/bitnami/spark/conf
             - ../sandbox/spark/app:/usr/local/spark/app # Scripts (same path in airflow and spark)
             - ../sandbox/spark/resources:/usr/local/spark/resources # Resources (same path in airflow and spark)
 

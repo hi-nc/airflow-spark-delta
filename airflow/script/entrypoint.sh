@@ -21,7 +21,7 @@ export \
   AIRFLOW_HOME \
   AIRFLOW__CORE__EXECUTOR \
 #  AIRFLOW__CORE__FERNET_KEY \
-  AIRFLOW__CORE__LOAD_EXAMPLES \
+  AIRFLOW__CORE__LOAD_EXAMPLES=False \
 
 # Install custom python package if requirements.txt is present
 if [ -e "/requirements.txt" ]; then
