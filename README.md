@@ -196,3 +196,17 @@ More info at: https://github.com/puckel/docker-airflow#build
 * The DAG [spark-delta-test.py](dags/spark-delta-test.py) loads [movies.csv](spark/resources/data/movies.csv)  data into delta tables.
   * This DAG runs the load-delta.py application.
   * To read the delta table you can use the [read-delta-notebook](notebooks/read-delta-notebook.ipynb)
+
+# Notebooks
+
+* This project contains 5 new notebooks added which analyzes Electric Vehicle Population 
+    * Master notebook: [EVAnalysisPipeline.ipynb](notebooks/EVAnalysisPipeline.ipynb) 
+     which runs other below notebooks in sequence for bronze, silver and gold layer data.
+       * 1.ev_analyze_extract_data.ipynb loads the data from the ElectricVehiclePopulationData.json file located under 
+        spark/resources/data folder, transforms the data and saves the table metadata, column data and vehicle data into three parquet files.  
+       * 2.populate_bronze.ipynb reads the parquet files created by the previous notebook and loads them into delta tables.
+       * 3.populate_silver.ipynb reads the delta tables created by the previous notebook, transforms the data and saves the 
+         table metadata, column data and vehicle data delta tables.
+       * 4.populate_gold.ipynb performs  analytical transformations on the available vehicle data in the delta tables and saves the 
+         results in the gold delta table.
+    * Audit table will be created/updated for each layer to track the changes in the data.
