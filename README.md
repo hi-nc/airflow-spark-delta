@@ -49,7 +49,7 @@ This project contains the following containers:
 
 ### Clone project
 
-    $ git clone https://github.com/nascimentocrafael/airflow-spark-delta
+    $ git clone https://github.com/hi-nc/airflow-spark-delta.git
 
 ### Build airflow Docker
 
