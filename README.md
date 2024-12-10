@@ -200,7 +200,7 @@ More info at: https://github.com/puckel/docker-airflow#build
 # Notebooks
 
 * This project contains 5 new notebooks added which analyzes Electric Vehicle Population 
-    * Master notebook: [EVAnalysisPipeline.ipynb](notebooks/EVAnalysisPipeline.ipynb) 
+    * Master notebook: [EVAnalysisPipeline.ipynb](notebooks/json_proc/EVAnalysisPipeline.ipynb) 
      which runs other below notebooks in sequence for bronze, silver and gold layer data.
        * 1.ev_analyze_extract_data.ipynb loads the data from the ElectricVehiclePopulationData.json file located under 
         spark/resources/data folder, transforms the data and saves the table metadata, column data and vehicle data into three parquet files.  
