@@ -1,0 +1,994 @@
+2024-11-15 18:23:03 jupyter-pyspark-1    | Entered start.sh with args: jupyter lab
+2024-11-15 18:23:03 jupyter-pyspark-1    | /usr/local/bin/start.sh: running hooks in /usr/local/bin/before-notebook.d as uid / gid: 1000 / 100
+2024-11-15 18:23:03 jupyter-pyspark-1    | /usr/local/bin/start.sh: running script /usr/local/bin/before-notebook.d/spark-config.sh
+2024-11-15 18:23:03 jupyter-pyspark-1    | /usr/local/bin/start.sh: done running hooks in /usr/local/bin/before-notebook.d
+2024-11-15 18:23:03 jupyter-pyspark-1    | Executing the command: jupyter lab
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.021 ServerApp] jupyterlab | extension was successfully linked.
+2024-11-15 18:23:06 jupyter-pyspark-1    | [W 2024-11-15 23:23:06.024 NotebookApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+2024-11-15 18:23:06 jupyter-pyspark-1    | [W 2024-11-15 23:23:06.024 NotebookApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+2024-11-15 18:23:06 jupyter-pyspark-1    | [W 2024-11-15 23:23:06.024 NotebookApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.028 ServerApp] nbclassic | extension was successfully linked.
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.029 ServerApp] Writing Jupyter server cookie secret to /home/jovyan/.local/share/jupyter/runtime/jupyter_cookie_secret
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.208 ServerApp] notebook_shim | extension was successfully linked.
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.232 ServerApp] notebook_shim | extension was successfully loaded.
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.234 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.10/site-packages/jupyterlab
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.234 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.236 ServerApp] jupyterlab | extension was successfully loaded.
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.238 ServerApp] nbclassic | extension was successfully loaded.
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.240 ServerApp] Serving notebooks from local directory: /home/jovyan
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.240 ServerApp] Jupyter Server 1.18.0 is running at:
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.240 ServerApp] http://75714beb92e2:8888/lab?token=f5d239457b1a06bdfc138d8b7e6b32b8be892f6f7af374be
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.240 ServerApp]  or http://127.0.0.1:8888/lab?token=f5d239457b1a06bdfc138d8b7e6b32b8be892f6f7af374be
+2024-11-15 18:23:06 jupyter-pyspark-1    | [I 2024-11-15 23:23:06.240 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+2024-11-15 18:23:06 jupyter-pyspark-1    | [C 2024-11-15 23:23:06.243 ServerApp]
+2024-11-15 18:23:06 jupyter-pyspark-1    |
+2024-11-15 18:23:06 jupyter-pyspark-1    |     To access the server, open this file in a browser:
+2024-11-15 18:23:06 jupyter-pyspark-1    |         file:///home/jovyan/.local/share/jupyter/runtime/jpserver-7-open.html
+2024-11-15 18:23:06 jupyter-pyspark-1    |     Or copy and paste one of these URLs:
+2024-11-15 18:23:06 jupyter-pyspark-1    |         http://75714beb92e2:8888/lab?token=f5d239457b1a06bdfc138d8b7e6b32b8be892f6f7af374be
+2024-11-15 18:23:06 jupyter-pyspark-1    |      or http://127.0.0.1:8888/lab?token=f5d239457b1a06bdfc138d8b7e6b32b8be892f6f7af374be
+2024-11-15 18:23:44 jupyter-pyspark-1    | [I 2024-11-15 23:23:44.895 ServerApp] 302 GET / (172.18.0.1) 1.12ms
+2024-11-15 18:23:44 jupyter-pyspark-1    | [I 2024-11-15 23:23:44.897 LabApp] 302 GET /lab? (172.18.0.1) 0.80ms
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: celery in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 1)) (5.1.2)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: kombu in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 2)) (5.2.4)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: tornado in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 3)) (6.2)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: werkzeug in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 4)) (2.2.3)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: pyspark==3.2.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 5)) (3.2.1)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (1.4.54)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: wtforms in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 7)) (2.3.3)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: py4j==0.10.9.3 in /usr/local/lib/python3.7/site-packages (from pyspark==3.2.1->-r /requirements.txt (line 5)) (0.10.9.3)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: pytz>dev in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (2024.2)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: billiard<4.0,>=3.6.4.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (3.6.4.0)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: vine<6.0,>=5.0.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (5.1.0)
+2024-11-15 19:58:25 airflow-webserver-1  | Collecting click<8.0,>=7.0 (from celery->-r /requirements.txt (line 1))
+2024-11-15 19:58:25 airflow-webserver-1  |   Downloading click-7.1.2-py2.py3-none-any.whl.metadata (2.9 kB)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: click-didyoumean>=0.0.3 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.1)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: click-repl>=0.1.6 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.0)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: click-plugins>=1.1.1 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (1.1.1)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (68.0.0)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: amqp<6.0.0,>=5.0.9 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (5.3.1)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: importlib-metadata>=0.18 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (4.13.0)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: cached-property in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (1.5.2)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.7/site-packages (from werkzeug->-r /requirements.txt (line 4)) (2.1.5)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/site-packages (from SQLAlchemy->-r /requirements.txt (line 6)) (3.1.1)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: prompt-toolkit>=3.0.36 in /usr/local/lib/python3.7/site-packages (from click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (3.0.48)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (3.15.0)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: typing-extensions>=3.6.4 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (4.7.1)
+2024-11-15 19:58:25 airflow-webserver-1  | Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (0.2.13)
+2024-11-15 19:58:25 airflow-webserver-1  | Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+2024-11-15 19:58:25 airflow-webserver-1  |    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.8/82.8 kB 2.4 MB/s eta 0:00:00
+2024-11-15 19:58:27 airflow-webserver-1  | DEPRECATION: celery 5.1.2 has a non-standard dependency specifier pytz>dev. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of celery or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+2024-11-15 18:23:04 postgres-1           | The files belonging to this database system will be owned by user "postgres".
+2024-11-15 18:23:04 postgres-1           | This user must also own the server process.
+2024-11-15 18:23:04 postgres-1           |
+2024-11-15 18:23:04 postgres-1           | The database cluster will be initialized with locale "en_US.utf8".
+2024-11-15 18:23:04 postgres-1           | The default database encoding has accordingly been set to "UTF8".
+2024-11-15 18:23:04 postgres-1           | The default text search configuration will be set to "english".
+2024-11-15 18:23:04 postgres-1           |
+2024-11-15 18:23:04 postgres-1           | Data page checksums are disabled.
+2024-11-15 18:23:04 postgres-1           |
+2024-11-15 18:23:04 postgres-1           | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+2024-11-15 18:23:04 postgres-1           | creating subdirectories ... ok
+2024-11-15 18:23:04 postgres-1           | selecting dynamic shared memory implementation ... posix
+2024-11-15 18:23:04 postgres-1           | selecting default max_connections ... 100
+2024-11-15 18:23:04 postgres-1           | selecting default shared_buffers ... 128MB
+2024-11-15 18:23:03 spark-worker-1       |  23:23:03.86
+2024-11-15 18:23:03 spark-worker-1       |  23:23:03.88 Welcome to the Bitnami spark container
+2024-11-15 18:23:03 spark-worker-1       |  23:23:03.89 Subscribe to project updates by watching https://github.com/bitnami/containers
+2024-11-15 18:23:03 spark-master-1       |  23:23:03.86
+2024-11-15 18:23:03 spark-worker-1       |  23:23:03.90 Submit issues and feature requests at https://github.com/bitnami/containers/issues
+2024-11-15 18:23:03 spark-master-1       |  23:23:03.88 Welcome to the Bitnami spark container
+2024-11-15 19:58:27 airflow-webserver-1  | Installing collected packages: click
+2024-11-15 19:58:27 airflow-webserver-1  | ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+2024-11-15 19:58:27 airflow-webserver-1  | flask 2.2.5 requires click>=8.0, but you have click 7.1.2 which is incompatible.
+2024-11-15 19:58:27 airflow-webserver-1  | flask-appbuilder 4.3.1 requires click<9,>=8, but you have click 7.1.2 which is incompatible.
+2024-11-15 19:58:27 airflow-webserver-1  | Successfully installed click-7.1.2
+2024-11-15 19:58:27 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:27 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:27 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:27 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 18:23:03 spark-worker-1       |  23:23:03.91
+2024-11-15 18:23:03 spark-master-1       |  23:23:03.89 Subscribe to project updates by watching https://github.com/bitnami/containers
+2024-11-15 18:23:03 spark-master-1       |  23:23:03.90 Submit issues and feature requests at https://github.com/bitnami/containers/issues
+2024-11-15 18:23:03 spark-master-1       |  23:23:03.91
+2024-11-15 18:23:04 spark-master-1       |  23:23:04.00 INFO  ==> ** Starting Spark setup **
+2024-11-15 18:23:04 spark-master-1       | realpath: /bitnami/spark/conf: No such file or directory
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:27 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:27 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:27 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:27 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:27 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:27 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:27 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:27 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:27 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:27 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:27 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:27 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:27 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 18:23:04 spark-master-1       |  23:23:04.11 INFO  ==> Generating Spark configuration file...
+2024-11-15 18:23:04 spark-master-1       |  23:23:04.14 INFO  ==> ** Spark setup finished! **
+2024-11-15 18:23:04 spark-master-1       |
+2024-11-15 18:23:04 spark-master-1       |  23:23:04.20 INFO  ==> ** Starting Spark in master mode **
+2024-11-15 18:23:04 spark-master-1       | starting org.apache.spark.deploy.master.Master, logging to /opt/bitnami/spark/logs/spark--org.apache.spark.deploy.master.Master-1-spark.out
+2024-11-15 19:58:27 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 18:23:05 spark-master-1       | Spark Command: /opt/bitnami/java/bin/java -cp /opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/* -Xmx1g org.apache.spark.deploy.master.Master --host spark --port 7077 --webui-port 8080
+2024-11-15 18:23:04 postgres-1           | selecting default time zone ... Etc/UTC
+2024-11-15 18:23:05 spark-master-1       | ========================================
+2024-11-15 18:23:04 postgres-1           | creating configuration files ... ok
+2024-11-15 18:23:04 postgres-1           | running bootstrap script ... ok
+2024-11-15 19:58:27 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:27 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:27 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:27 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 18:23:06 spark-master-1       | Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 INFO Master: Started daemon with process name: 40@spark
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 INFO SignalUtils: Registering signal handler for TERM
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 INFO SignalUtils: Registering signal handler for HUP
+2024-11-15 18:23:05 postgres-1           | performing post-bootstrap initialization ... ok
+2024-11-15 18:23:05 postgres-1           | initdb: warning: enabling "trust" authentication for local connections
+2024-11-15 18:23:05 postgres-1           | You can change this by editing pg_hba.conf or using the option -A, or
+2024-11-15 18:23:05 postgres-1           | --auth-local and --auth-host, the next time you run initdb.
+2024-11-15 18:23:05 postgres-1           | syncing data to disk ... ok
+2024-11-15 18:23:05 postgres-1           |
+2024-11-15 18:23:05 postgres-1           |
+2024-11-15 18:23:05 postgres-1           | Success. You can now start the database server using:
+2024-11-15 18:23:05 postgres-1           |
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 INFO SignalUtils: Registering signal handler for INT
+2024-11-15 18:23:04 spark-worker-1       |  23:23:03.99 INFO  ==> ** Starting Spark setup **
+2024-11-15 18:23:04 spark-worker-1       | realpath: /bitnami/spark/conf: No such file or directory
+2024-11-15 19:58:27 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:27 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:27 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:27 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:27 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:27 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 18:23:04 spark-worker-1       |  23:23:04.10 INFO  ==> Generating Spark configuration file...
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2024-11-15 18:23:04 spark-worker-1       |  23:23:04.14 INFO  ==> ** Spark setup finished! **
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 18:23:04 spark-worker-1       |
+2024-11-15 19:58:27 airflow-webserver-1  |     import psycopg2
+2024-11-15 18:23:04 spark-worker-1       |  23:23:04.19 INFO  ==> ** Starting Spark in worker mode **
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 18:23:04 spark-worker-1       | starting org.apache.spark.deploy.worker.Worker, logging to /opt/bitnami/spark/logs/spark--org.apache.spark.deploy.worker.Worker-1-304ad8a260df.out
+2024-11-15 18:23:05 spark-worker-1       | Spark Command: /opt/bitnami/java/bin/java -cp /opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/* -Xmx1g org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://spark:7077
+2024-11-15 18:23:05 spark-worker-1       | ========================================
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 INFO SecurityManager: Changing view acls to: spark
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 INFO SecurityManager: Changing modify acls to: spark
+2024-11-15 18:23:06 spark-worker-1       | Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 INFO Worker: Started daemon with process name: 38@304ad8a260df
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 INFO SignalUtils: Registering signal handler for TERM
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 INFO SignalUtils: Registering signal handler for HUP
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 INFO SignalUtils: Registering signal handler for INT
+2024-11-15 19:58:27 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 18:23:05 postgres-1           |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+2024-11-15 18:23:05 postgres-1           |
+2024-11-15 19:58:27 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:27 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:27 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 18:23:05 postgres-1           | waiting for server to start....2024-11-15 23:23:05.386 UTC [49] LOG:  starting PostgreSQL 13.6 (Debian 13.6-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.387 UTC [49] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.393 UTC [50] LOG:  database system was shut down at 2024-11-15 23:23:05 UTC
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:27 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 INFO SecurityManager: Changing view acls groups to:
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 INFO SecurityManager: Changing modify acls groups to:
+2024-11-15 18:23:06 spark-master-1       | 24/11/15 23:23:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(spark); groups with view permissions: Set(); users  with modify permissions: Set(spark); groups with modify permissions: Set()
+2024-11-15 18:23:07 spark-master-1       | 24/11/15 23:23:07 INFO Utils: Successfully started service 'sparkMaster' on port 7077.
+2024-11-15 18:23:07 spark-master-1       | 24/11/15 23:23:07 INFO Master: Starting Spark master at spark://spark:7077
+2024-11-15 18:23:07 spark-master-1       | 24/11/15 23:23:07 INFO Master: Running Spark version 3.2.1
+2024-11-15 18:23:07 spark-master-1       | 24/11/15 23:23:07 INFO Utils: Successfully started service 'MasterUI' on port 8080.
+2024-11-15 18:23:07 spark-master-1       | 24/11/15 23:23:07 INFO MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://spark:8080
+2024-11-15 18:23:07 spark-master-1       | 24/11/15 23:23:07 INFO Master: I have been elected leader! New state: ALIVE
+2024-11-15 18:23:07 spark-master-1       | 24/11/15 23:23:07 INFO Master: Registering worker 172.18.0.2:42937 with 1 cores, 1024.0 MiB RAM
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 INFO SecurityManager: Changing view acls to: spark
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 INFO SecurityManager: Changing modify acls to: spark
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 INFO SecurityManager: Changing view acls groups to:
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 INFO SecurityManager: Changing modify acls groups to:
+2024-11-15 18:23:06 spark-worker-1       | 24/11/15 23:23:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(spark); groups with view permissions: Set(); users  with modify permissions: Set(spark); groups with modify permissions: Set()
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO Utils: Successfully started service 'sparkWorker' on port 42937.
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO Worker: Worker decommissioning not enabled.
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO Worker: Starting Spark worker 172.18.0.2:42937 with 1 cores, 1024.0 MiB RAM
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.398 UTC [49] LOG:  database system is ready to accept connections
+2024-11-15 18:23:05 postgres-1           |  done
+2024-11-15 19:58:27 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:27 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 18:23:05 postgres-1           | server started
+2024-11-15 18:23:05 postgres-1           | CREATE DATABASE
+2024-11-15 18:23:05 postgres-1           |
+2024-11-15 18:23:05 postgres-1           |
+2024-11-15 18:23:05 postgres-1           | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+2024-11-15 19:58:27 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO Worker: Running Spark version 3.2.1
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO Worker: Spark home: /opt/bitnami/spark
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:27 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:27 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:27 airflow-webserver-1  |     import psycopg2
+2024-11-15 18:23:05 postgres-1           |
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.797 UTC [49] LOG:  received fast shutdown request
+2024-11-15 18:23:05 postgres-1           | waiting for server to shut down....2024-11-15 23:23:05.798 UTC [49] LOG:  aborting any active transactions
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.798 UTC [49] LOG:  background worker "logical replication launcher" (PID 56) exited with exit code 1
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.799 UTC [51] LOG:  shutting down
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO ResourceUtils: ==============================================================
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO ResourceUtils: No custom resources configured for spark.worker.
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO ResourceUtils: ==============================================================
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO WorkerWebUI: Bound WorkerWebUI to 0.0.0.0, and started at http://304ad8a260df:8081
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO Worker: Connecting to master spark:7077...
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO TransportClientFactory: Successfully created connection to spark/172.18.0.5:7077 after 23 ms (0 ms spent in bootstraps)
+2024-11-15 19:58:27 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:27 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:27 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: celery in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 1)) (5.1.2)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: kombu in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 2)) (5.2.4)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: tornado in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 3)) (6.2)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: werkzeug in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 4)) (2.2.3)
+2024-11-15 18:23:07 spark-worker-1       | 24/11/15 23:23:07 INFO Worker: Successfully registered with master spark://spark:7077
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: pyspark==3.2.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 5)) (3.2.1)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (1.4.54)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: wtforms in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 7)) (2.3.3)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: py4j==0.10.9.3 in /usr/local/lib/python3.7/site-packages (from pyspark==3.2.1->-r /requirements.txt (line 5)) (0.10.9.3)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: pytz>dev in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (2024.2)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: billiard<4.0,>=3.6.4.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (3.6.4.0)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: vine<6.0,>=5.0.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (5.1.0)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: click<8.0,>=7.0 in ./.local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (7.1.2)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: click-didyoumean>=0.0.3 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.1)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: click-repl>=0.1.6 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.0)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: click-plugins>=1.1.1 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (1.1.1)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (68.0.0)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: amqp<6.0.0,>=5.0.9 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (5.3.1)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: importlib-metadata>=0.18 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (4.13.0)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: cached-property in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (1.5.2)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.7/site-packages (from werkzeug->-r /requirements.txt (line 4)) (2.1.5)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/site-packages (from SQLAlchemy->-r /requirements.txt (line 6)) (3.1.1)
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.805 UTC [49] LOG:  database system is shut down
+2024-11-15 18:23:05 postgres-1           |  done
+2024-11-15 18:23:05 postgres-1           | server stopped
+2024-11-15 18:23:05 postgres-1           |
+2024-11-15 18:23:05 postgres-1           | PostgreSQL init process complete; ready for start up.
+2024-11-15 18:23:05 postgres-1           |
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.910 UTC [1] LOG:  starting PostgreSQL 13.6 (Debian 13.6-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.911 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.911 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.915 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: prompt-toolkit>=3.0.36 in /usr/local/lib/python3.7/site-packages (from click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (3.0.48)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (3.15.0)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: typing-extensions>=3.6.4 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (4.7.1)
+2024-11-15 19:58:28 airflow-webserver-1  | Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (0.2.13)
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.919 UTC [63] LOG:  database system was shut down at 2024-11-15 23:23:05 UTC
+2024-11-15 18:23:05 postgres-1           | 2024-11-15 23:23:05.923 UTC [1] LOG:  database system is ready to accept connections
+2024-11-15 19:58:29 airflow-webserver-1  | DEPRECATION: celery 5.1.2 has a non-standard dependency specifier pytz>dev. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of celery or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+2024-11-15 19:58:29 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:29 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:29 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:29 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:29 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:29 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:29 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:29 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:29 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:29 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:29 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:29 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:29 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:29 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:29 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:29 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:29 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:29 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:29 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:29 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:29 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:29 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:30 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:30 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:30 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:30 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:30 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:30 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:30 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:30 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:30 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:30 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:30 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:30 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:30 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:30 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:30 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:30 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:30 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:30 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:30 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:30 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:30 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:30 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:30 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:30 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:30 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:30 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:30 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:30 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:30 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: celery in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 1)) (5.1.2)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: kombu in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 2)) (5.2.4)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: tornado in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 3)) (6.2)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: werkzeug in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 4)) (2.2.3)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: pyspark==3.2.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 5)) (3.2.1)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (1.4.54)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: wtforms in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 7)) (2.3.3)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: py4j==0.10.9.3 in /usr/local/lib/python3.7/site-packages (from pyspark==3.2.1->-r /requirements.txt (line 5)) (0.10.9.3)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: pytz>dev in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (2024.2)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: billiard<4.0,>=3.6.4.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (3.6.4.0)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: vine<6.0,>=5.0.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (5.1.0)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: click<8.0,>=7.0 in ./.local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (7.1.2)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: click-didyoumean>=0.0.3 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.1)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: click-repl>=0.1.6 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.0)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: click-plugins>=1.1.1 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (1.1.1)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (68.0.0)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: amqp<6.0.0,>=5.0.9 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (5.3.1)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: importlib-metadata>=0.18 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (4.13.0)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: cached-property in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (1.5.2)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.7/site-packages (from werkzeug->-r /requirements.txt (line 4)) (2.1.5)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/site-packages (from SQLAlchemy->-r /requirements.txt (line 6)) (3.1.1)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: prompt-toolkit>=3.0.36 in /usr/local/lib/python3.7/site-packages (from click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (3.0.48)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (3.15.0)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: typing-extensions>=3.6.4 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (4.7.1)
+2024-11-15 19:58:30 airflow-webserver-1  | Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (0.2.13)
+2024-11-15 19:58:32 airflow-webserver-1  | DEPRECATION: celery 5.1.2 has a non-standard dependency specifier pytz>dev. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of celery or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+2024-11-15 19:58:32 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:32 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:32 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:32 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:32 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:32 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:32 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:32 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:32 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:32 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:32 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:32 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:32 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:32 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:32 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:32 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:32 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:32 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:32 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:32 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:32 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:32 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:32 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:32 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:32 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:32 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:32 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:32 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:32 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:32 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:32 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:32 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:32 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:32 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:32 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:32 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:32 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:32 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:32 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:32 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:32 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:32 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:32 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: celery in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 1)) (5.1.2)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: kombu in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 2)) (5.2.4)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: tornado in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 3)) (6.2)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: werkzeug in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 4)) (2.2.3)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: pyspark==3.2.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 5)) (3.2.1)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (1.4.54)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: wtforms in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 7)) (2.3.3)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: py4j==0.10.9.3 in /usr/local/lib/python3.7/site-packages (from pyspark==3.2.1->-r /requirements.txt (line 5)) (0.10.9.3)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: pytz>dev in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (2024.2)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: billiard<4.0,>=3.6.4.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (3.6.4.0)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: vine<6.0,>=5.0.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (5.1.0)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: click<8.0,>=7.0 in ./.local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (7.1.2)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: click-didyoumean>=0.0.3 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.1)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: click-repl>=0.1.6 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.0)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: click-plugins>=1.1.1 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (1.1.1)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (68.0.0)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: amqp<6.0.0,>=5.0.9 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (5.3.1)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: importlib-metadata>=0.18 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (4.13.0)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: cached-property in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (1.5.2)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.7/site-packages (from werkzeug->-r /requirements.txt (line 4)) (2.1.5)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/site-packages (from SQLAlchemy->-r /requirements.txt (line 6)) (3.1.1)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: prompt-toolkit>=3.0.36 in /usr/local/lib/python3.7/site-packages (from click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (3.0.48)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (3.15.0)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: typing-extensions>=3.6.4 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (4.7.1)
+2024-11-15 19:58:33 airflow-webserver-1  | Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (0.2.13)
+2024-11-15 19:58:34 airflow-webserver-1  | DEPRECATION: celery 5.1.2 has a non-standard dependency specifier pytz>dev. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of celery or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+2024-11-15 19:58:35 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:35 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:35 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:35 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:35 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:35 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:35 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:35 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:35 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:35 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:35 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:35 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:35 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:35 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:35 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:35 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:35 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:35 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:35 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:35 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:35 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:35 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:35 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:35 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:35 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:35 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:35 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:35 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:35 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:35 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:35 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:35 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:35 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:35 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:35 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:35 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:35 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:35 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:35 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:35 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:35 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:35 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:35 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: celery in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 1)) (5.1.2)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: kombu in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 2)) (5.2.4)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: tornado in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 3)) (6.2)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: werkzeug in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 4)) (2.2.3)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: pyspark==3.2.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 5)) (3.2.1)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (1.4.54)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: wtforms in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 7)) (2.3.3)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: py4j==0.10.9.3 in /usr/local/lib/python3.7/site-packages (from pyspark==3.2.1->-r /requirements.txt (line 5)) (0.10.9.3)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: pytz>dev in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (2024.2)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: billiard<4.0,>=3.6.4.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (3.6.4.0)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: vine<6.0,>=5.0.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (5.1.0)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: click<8.0,>=7.0 in ./.local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (7.1.2)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: click-didyoumean>=0.0.3 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.1)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: click-repl>=0.1.6 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.0)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: click-plugins>=1.1.1 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (1.1.1)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (68.0.0)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: amqp<6.0.0,>=5.0.9 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (5.3.1)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: importlib-metadata>=0.18 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (4.13.0)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: cached-property in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (1.5.2)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.7/site-packages (from werkzeug->-r /requirements.txt (line 4)) (2.1.5)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/site-packages (from SQLAlchemy->-r /requirements.txt (line 6)) (3.1.1)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: prompt-toolkit>=3.0.36 in /usr/local/lib/python3.7/site-packages (from click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (3.0.48)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (3.15.0)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: typing-extensions>=3.6.4 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (4.7.1)
+2024-11-15 19:58:36 airflow-webserver-1  | Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (0.2.13)
+2024-11-15 19:58:37 airflow-webserver-1  | DEPRECATION: celery 5.1.2 has a non-standard dependency specifier pytz>dev. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of celery or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+2024-11-15 19:58:38 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:38 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:38 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:38 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:38 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:38 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:38 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:38 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:38 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:38 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:38 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:38 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:38 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:38 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:38 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:38 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:38 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:38 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:38 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:38 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:38 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:38 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:38 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:38 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:38 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:38 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:38 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:38 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:38 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:38 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:38 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:38 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:38 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:38 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:38 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:38 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:38 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:38 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:38 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:38 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:38 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:38 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:38 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: celery in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 1)) (5.1.2)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: kombu in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 2)) (5.2.4)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: tornado in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 3)) (6.2)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: werkzeug in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 4)) (2.2.3)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: pyspark==3.2.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 5)) (3.2.1)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (1.4.54)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: wtforms in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 7)) (2.3.3)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: py4j==0.10.9.3 in /usr/local/lib/python3.7/site-packages (from pyspark==3.2.1->-r /requirements.txt (line 5)) (0.10.9.3)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: pytz>dev in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (2024.2)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: billiard<4.0,>=3.6.4.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (3.6.4.0)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: vine<6.0,>=5.0.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (5.1.0)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: click<8.0,>=7.0 in ./.local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (7.1.2)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: click-didyoumean>=0.0.3 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.1)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: click-repl>=0.1.6 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.0)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: click-plugins>=1.1.1 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (1.1.1)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (68.0.0)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: amqp<6.0.0,>=5.0.9 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (5.3.1)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: importlib-metadata>=0.18 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (4.13.0)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: cached-property in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (1.5.2)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.7/site-packages (from werkzeug->-r /requirements.txt (line 4)) (2.1.5)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/site-packages (from SQLAlchemy->-r /requirements.txt (line 6)) (3.1.1)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: prompt-toolkit>=3.0.36 in /usr/local/lib/python3.7/site-packages (from click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (3.0.48)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (3.15.0)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: typing-extensions>=3.6.4 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (4.7.1)
+2024-11-15 19:58:40 airflow-webserver-1  | Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (0.2.13)
+2024-11-15 19:58:41 airflow-webserver-1  | DEPRECATION: celery 5.1.2 has a non-standard dependency specifier pytz>dev. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of celery or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+2024-11-15 19:58:41 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:41 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:41 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:42 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:42 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:42 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:42 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:42 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:42 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:42 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:42 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:42 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:42 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:42 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:42 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:42 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:42 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:42 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:42 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:42 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:42 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:42 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:42 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:42 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:42 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:42 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:42 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:42 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:42 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:42 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:42 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:42 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:42 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:42 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:42 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:42 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:42 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:42 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:42 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:42 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:42 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:42 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:42 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: celery in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 1)) (5.1.2)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: kombu in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 2)) (5.2.4)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: tornado in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 3)) (6.2)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: werkzeug in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 4)) (2.2.3)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: pyspark==3.2.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 5)) (3.2.1)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (1.4.54)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: wtforms in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 7)) (2.3.3)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: py4j==0.10.9.3 in /usr/local/lib/python3.7/site-packages (from pyspark==3.2.1->-r /requirements.txt (line 5)) (0.10.9.3)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: pytz>dev in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (2024.2)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: billiard<4.0,>=3.6.4.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (3.6.4.0)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: vine<6.0,>=5.0.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (5.1.0)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: click<8.0,>=7.0 in ./.local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (7.1.2)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: click-didyoumean>=0.0.3 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.1)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: click-repl>=0.1.6 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.0)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: click-plugins>=1.1.1 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (1.1.1)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (68.0.0)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: amqp<6.0.0,>=5.0.9 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (5.3.1)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: importlib-metadata>=0.18 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (4.13.0)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: cached-property in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (1.5.2)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.7/site-packages (from werkzeug->-r /requirements.txt (line 4)) (2.1.5)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/site-packages (from SQLAlchemy->-r /requirements.txt (line 6)) (3.1.1)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: prompt-toolkit>=3.0.36 in /usr/local/lib/python3.7/site-packages (from click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (3.0.48)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (3.15.0)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: typing-extensions>=3.6.4 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (4.7.1)
+2024-11-15 19:58:45 airflow-webserver-1  | Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (0.2.13)
+2024-11-15 19:58:47 airflow-webserver-1  | DEPRECATION: celery 5.1.2 has a non-standard dependency specifier pytz>dev. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of celery or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+2024-11-15 19:58:47 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:47 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:47 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:47 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:47 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:47 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:47 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:47 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:47 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:47 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:47 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:47 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:47 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:47 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:47 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:47 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:47 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:47 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:47 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:47 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:47 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:47 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:47 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:47 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:47 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:47 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:47 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:47 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:47 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:47 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:47 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:47 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:47 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:47 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:47 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:47 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:47 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:47 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:47 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:47 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:47 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:47 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:47 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: celery in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 1)) (5.1.2)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: kombu in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 2)) (5.2.4)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: tornado in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 3)) (6.2)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: werkzeug in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 4)) (2.2.3)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: pyspark==3.2.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 5)) (3.2.1)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (1.4.54)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: wtforms in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 7)) (2.3.3)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: py4j==0.10.9.3 in /usr/local/lib/python3.7/site-packages (from pyspark==3.2.1->-r /requirements.txt (line 5)) (0.10.9.3)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: pytz>dev in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (2024.2)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: billiard<4.0,>=3.6.4.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (3.6.4.0)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: vine<6.0,>=5.0.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (5.1.0)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: click<8.0,>=7.0 in ./.local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (7.1.2)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: click-didyoumean>=0.0.3 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.1)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: click-repl>=0.1.6 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.0)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: click-plugins>=1.1.1 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (1.1.1)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (68.0.0)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: amqp<6.0.0,>=5.0.9 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (5.3.1)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: importlib-metadata>=0.18 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (4.13.0)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: cached-property in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (1.5.2)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.7/site-packages (from werkzeug->-r /requirements.txt (line 4)) (2.1.5)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/site-packages (from SQLAlchemy->-r /requirements.txt (line 6)) (3.1.1)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: prompt-toolkit>=3.0.36 in /usr/local/lib/python3.7/site-packages (from click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (3.0.48)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (3.15.0)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: typing-extensions>=3.6.4 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (4.7.1)
+2024-11-15 19:58:54 airflow-webserver-1  | Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (0.2.13)
+2024-11-15 19:58:56 airflow-webserver-1  | DEPRECATION: celery 5.1.2 has a non-standard dependency specifier pytz>dev. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of celery or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+2024-11-15 19:58:56 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:56 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:56 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:56 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:56 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:56 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:56 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:56 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:56 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:56 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:56 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:56 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:56 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:56 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:56 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:56 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:56 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:56 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:56 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:56 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:58:56 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:56 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:56 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:56 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:56 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:56 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:56 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:56 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:56 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:56 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:56 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:58:56 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:58:56 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:58:56 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:58:56 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:58:56 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:58:56 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:58:56 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:58:56 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:58:56 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:58:56 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:58:56 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:58:56 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: celery in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 1)) (5.1.2)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: kombu in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 2)) (5.2.4)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: tornado in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 3)) (6.2)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: werkzeug in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 4)) (2.2.3)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: pyspark==3.2.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 5)) (3.2.1)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (1.4.54)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: wtforms in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 7)) (2.3.3)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: py4j==0.10.9.3 in /usr/local/lib/python3.7/site-packages (from pyspark==3.2.1->-r /requirements.txt (line 5)) (0.10.9.3)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: pytz>dev in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (2024.2)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: billiard<4.0,>=3.6.4.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (3.6.4.0)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: vine<6.0,>=5.0.0 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (5.1.0)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: click<8.0,>=7.0 in ./.local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (7.1.2)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: click-didyoumean>=0.0.3 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.1)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: click-repl>=0.1.6 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (0.3.0)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: click-plugins>=1.1.1 in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (1.1.1)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from celery->-r /requirements.txt (line 1)) (68.0.0)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: amqp<6.0.0,>=5.0.9 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (5.3.1)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: importlib-metadata>=0.18 in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (4.13.0)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: cached-property in /usr/local/lib/python3.7/site-packages (from kombu->-r /requirements.txt (line 2)) (1.5.2)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.7/site-packages (from werkzeug->-r /requirements.txt (line 4)) (2.1.5)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/site-packages (from SQLAlchemy->-r /requirements.txt (line 6)) (3.1.1)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: prompt-toolkit>=3.0.36 in /usr/local/lib/python3.7/site-packages (from click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (3.0.48)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (3.15.0)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: typing-extensions>=3.6.4 in /usr/local/lib/python3.7/site-packages (from importlib-metadata>=0.18->kombu->-r /requirements.txt (line 2)) (4.7.1)
+2024-11-15 19:59:09 airflow-webserver-1  | Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.1.6->celery->-r /requirements.txt (line 1)) (0.2.13)
+2024-11-15 19:59:11 airflow-webserver-1  | DEPRECATION: celery 5.1.2 has a non-standard dependency specifier pytz>dev. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of celery or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+2024-11-15 19:59:11 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:59:11 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:59:11 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:59:11 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:59:11 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:59:11 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:59:11 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:59:11 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:59:11 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:59:11 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:59:11 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:59:11 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:59:11 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:59:11 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:59:11 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:59:11 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:452 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:59:11 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:59:11 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/configuration.py:378 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:59:11 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:59:11 airflow-webserver-1  | /usr/local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+2024-11-15 19:59:11 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:59:11 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:59:11 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:59:11 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:59:11 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:59:11 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:59:11 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:59:11 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:59:11 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:59:11 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:59:11 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2024-11-15 19:59:11 airflow-webserver-1  | Traceback (most recent call last):
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/bin/airflow", line 5, in <module>
+2024-11-15 19:59:11 airflow-webserver-1  |     from airflow.__main__ import main
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/__init__.py", line 69, in <module>
+2024-11-15 19:59:11 airflow-webserver-1  |     settings.initialize()
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 529, in initialize
+2024-11-15 19:59:11 airflow-webserver-1  |     configure_orm()
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/airflow/settings.py", line 222, in configure_orm
+2024-11-15 19:59:11 airflow-webserver-1  |     engine = create_engine(SQL_ALCHEMY_CONN, connect_args=connect_args, **engine_args)
+2024-11-15 19:59:11 airflow-webserver-1  |   File "<string>", line 2, in create_engine
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+2024-11-15 19:59:11 airflow-webserver-1  |     return fn(*args, **kwargs)
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+2024-11-15 19:59:11 airflow-webserver-1  |     dbapi = dialect_cls.dbapi(**dbapi_args)
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 811, in dbapi
+2024-11-15 19:59:11 airflow-webserver-1  |     import psycopg2
+2024-11-15 19:59:11 airflow-webserver-1  |   File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 51, in <module>
+2024-11-15 19:59:11 airflow-webserver-1  |     from psycopg2._psycopg import (                     # noqa
+2024-11-15 19:59:11 airflow-webserver-1  | ImportError: libpq.so.5: cannot open shared object file: No such file or directory
+2036-01-01 00:00:00
+2001-01-01 00:00:00 xited with code 1
