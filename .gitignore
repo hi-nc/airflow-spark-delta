@@ -80,3 +80,4 @@ target/
 spark/resources/data/raw/derived/columns_metadata/*
 spark/resources/data/raw/derived/table_metadata/*
 spark/resources/data/raw/derived/vehicle_data/*
+notebooks/json_proc/spark-warehouse/*
