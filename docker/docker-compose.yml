@@ -135,5 +135,41 @@ services:
           - ../spark/resources/data:/home/jovyan/work/data/
           - ../spark/resources/jars:/home/jovyan/work/jars/
 
+    # Minio
+    minio:
+        image: bitnami/minio:latest
+        container_name: minio
+        ports:
+            - "9000:9000"
+            - "9001:9001"
+        environment:
+            MINIO_ROOT_USER: root
+            MINIO_ROOT_PASSWORD: password
+            MINIO_DEFAULT_BUCKETS: metastore
+        volumes:
+            - minio-data:/data
+
+    superset:
+        image: apache/superset:latest
+        container_name: superset
+        environment:
+            SUPERSET_LOAD_EXAMPLES: "no"
+            SUPERSET_SECRET_KEY: "906ef676-74df-42a8-812d-f08cc7122b39"
+            SUPERSET_META_DB_URI: "sqlite:////superset_home/superset.db"
+        ports:
+            - "8088:8088"
+        volumes:
+            - superset-home:/app/superset_home
+        command: >
+                bash -c "
+                superset db upgrade && \
+                superset fab create-admin --username admin --firstname Superset --lastname Admin --email admin@example.com --password admin && \
+                superset init && \
+                superset run -p 8088 -h 0.0.0.0 --with-threads --reload --debugger
+                "
+volumes:
+    minio-data:
+    superset-home:
+
 networks:
     default_net:

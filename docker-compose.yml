@@ -1,23 +1,23 @@
-# Verify volumes
-version: "3.8"
+version: "3.7"
 services:  
-    # Postgres used by Airflow
+    # postgres used by airflow
     postgres:
-        image: postgres:13.6
+        image: postgres:13.10-alpine
         networks:
             - default_net
+        volumes: 
+            # Create Test database on Postgresql
+            - ./docker-airflow/pg-init-scripts:/docker-entrypoint-initdb.d
         environment:
             - POSTGRES_USER=airflow
             - POSTGRES_PASSWORD=airflow
             - POSTGRES_DB=airflow
-        volumes:
-            - "../sandbox/postgres:/var/lib/postgresql/data"
         ports:
             - "5432:5432"
 
-    # Airflow LocalExecutor
+    # airflow LocalExecutor
     airflow-webserver:
-        image: docker-airflow4:latest
+        image: docker-airflow-spark:2.5.3_3.3.2
         restart: always
         networks:
             - default_net
@@ -27,11 +27,11 @@ services:
             - LOAD_EX=n
             - EXECUTOR=Local
         volumes:
-            - ../sandbox/dags:/usr/local/airflow/dags # DAGs folder
-            - ../sandbox/spark/app:/usr/local/spark/app # Spark Scripts (same path in airflow and spark)
-            - ../sandbox/spark/resources:/usr/local/spark/resources # Spark Resources (same path in airflow and spark)
+            - ../dags:/usr/local/airflow/dags #DAG folder
+            - ../spark/app:/usr/local/spark/app #Spark Scripts (Must be the same path in airflow and Spark Cluster)
+            - ../spark/resources:/usr/local/spark/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
         ports:
-            - "8080:8080" #host:container
+            - "8282:8282"
         command: webserver
         healthcheck:
             test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
@@ -39,10 +39,10 @@ services:
             timeout: 30s
             retries: 3
 
-    # Spark with N workers
-    spark-master:
-        image: bitnami/spark:3.2.1
-        #user: root # Run container as root container: https://docs.bitnami.com/tutorials/work-with-non-root-containers/
+    # Spark with 3 workers
+    spark:
+        build: "./docker-pyspark-delta"
+        user: root # Run container as root container: https://docs.bitnami.com/tutorials/work-with-non-root-containers/
         hostname: spark
         networks:
             - default_net
@@ -52,16 +52,18 @@ services:
             - SPARK_RPC_ENCRYPTION_ENABLED=no
             - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
             - SPARK_SSL_ENABLED=no
+            - PYSPARK_PYTHON=/opt/bitnami/python/bin/python3
+            - PYSPARK_DRIVER_PYTHON=/opt/bitnami/python/bin/python3
         volumes:
-            - ../sandbox/spark/app:/usr/local/spark/app # Scripts (same path in airflow and spark)
-            - ../sandbox/spark/resources:/usr/local/spark/resources # Resources (same path in airflow and spark)
+            - ../spark/app:/usr/local/spark/app # Spark scripts folder (Must be the same path in airflow and Spark Cluster)
+            - ../spark/resources:/usr/local/spark/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
         ports:
-            - "8081:8080"
+            - "8181:8080"
             - "7077:7077"
 
-    spark-worker:
-        image: bitnami/spark:3.2.1
-        #user: root
+    spark-worker-1:
+        build: "./docker-pyspark-delta"
+        user: root
         networks:
             - default_net
         environment:
@@ -73,22 +75,101 @@ services:
             - SPARK_RPC_ENCRYPTION_ENABLED=no
             - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
             - SPARK_SSL_ENABLED=no
+            - PYSPARK_PYTHON=/opt/bitnami/python/bin/python3
+            - PYSPARK_DRIVER_PYTHON=/opt/bitnami/python/bin/python3
         volumes:
-            - ../sandbox/spark/conf:/bitnami/spark/conf
-            - ../sandbox/spark/app:/usr/local/spark/app # Scripts (same path in airflow and spark)
-            - ../sandbox/spark/resources:/usr/local/spark/resources # Resources (same path in airflow and spark)
+            - ../spark/app:/usr/local/spark/app # Spark scripts folder (Must be the same path in airflow and Spark Cluster)
+            - ../spark/resources:/usr/local/spark/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
 
-    # Jupyter Notebooks
-    jupyter-pyspark:
-        image: jupyter/pyspark-notebook:spark-3.2.1 # pyspark
-        #image: jupyter/all-spark-notebook:spark-3.2.1 # scala
-        #image: jupyter/datascience-notebook:latest # julia 
+    spark-worker-2:
+        build: "./docker-pyspark-delta"
+        user: root
+        networks:
+            - default_net
+        environment:
+            - SPARK_MODE=worker
+            - SPARK_MASTER_URL=spark://spark:7077
+            - SPARK_WORKER_MEMORY=1G
+            - SPARK_WORKER_CORES=1
+            - SPARK_RPC_AUTHENTICATION_ENABLED=no
+            - SPARK_RPC_ENCRYPTION_ENABLED=no
+            - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+            - SPARK_SSL_ENABLED=no
+            - PYSPARK_PYTHON=/opt/bitnami/python/bin/python3
+            - PYSPARK_DRIVER_PYTHON=/opt/bitnami/python/bin/python3
+        volumes:
+            - ../spark/app:/usr/local/spark/app # Spark scripts folder (Must be the same path in airflow and Spark Cluster)
+            - ../spark/resources:/usr/local/spark/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
+
+    spark-worker-3:
+        build: "./docker-pyspark-delta"
+        user: root
+        networks:
+            - default_net
+        environment:
+            - SPARK_MODE=worker
+            - SPARK_MASTER_URL=spark://spark:7077
+            - SPARK_WORKER_MEMORY=1G
+            - SPARK_WORKER_CORES=1
+            - SPARK_RPC_AUTHENTICATION_ENABLED=no
+            - SPARK_RPC_ENCRYPTION_ENABLED=no
+            - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+            - SPARK_SSL_ENABLED=no
+            - PYSPARK_PYTHON=/opt/bitnami/python/bin/python3
+            - PYSPARK_DRIVER_PYTHON=/opt/bitnami/python/bin/python3
+        volumes:
+            - ../spark/app:/usr/local/spark/app # Spark scripts folder (Must be the same path in airflow and Spark Cluster)
+            - ../spark/resources:/usr/local/spark/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
+
+    #Jupyter notebook
+    jupyter-spark:
+        #image: jupyter/pyspark-notebook:spark-3.3.2
+        build: "./docker-jupyter-pyspark-delta"
         networks:
             - default_net
         ports:
           - "8888:8888"
+          - "4040-4080:4040-4080"
         volumes:
-          - ../sandbox/notebooks:/home/jovyan/work/notebooks/
+          - ../notebooks:/home/jovyan/work/notebooks/
+          - ../spark/resources/data:/home/jovyan/work/data/
+          - ../spark/resources/jars:/home/jovyan/work/jars/
+
+    # Minio
+    minio:
+        image: bitnami/minio:latest
+        container_name: minio
+        ports:
+            - "9000:9000"
+            - "9001:9001"
+        environment:
+            MINIO_ROOT_USER: root
+            MINIO_ROOT_PASSWORD: password
+            MINIO_DEFAULT_BUCKETS: metastore
+        volumes:
+            - minio-data:/data
+
+    superset:
+        image: apache/superset:latest
+        container_name: superset
+        environment:
+            SUPERSET_LOAD_EXAMPLES: "no"
+            SUPERSET_SECRET_KEY: "906ef676-74df-42a8-812d-f08cc7122b39"
+            SUPERSET_META_DB_URI: "sqlite:////superset_home/superset.db"
+        ports:
+            - "8088:8088"
+        volumes:
+            - superset-home:/app/superset_home
+        command: >
+                bash -c "
+                superset db upgrade && \
+                superset fab create-admin --username admin --firstname Superset --lastname Admin --email admin@example.com --password admin && \
+                superset init && \
+                superset run -p 8088 -h 0.0.0.0 --with-threads --reload --debugger
+                "
+volumes:
+    minio-data:
+    superset-home:
 
 networks:
     default_net:

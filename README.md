@@ -41,6 +41,16 @@ This project contains the following containers:
     * https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-pyspark-notebook
     * https://hub.docker.com/r/jupyter/pyspark-notebook/tags/
 
+* minio (optional): Minio server to store the data.
+    * Image: minio/minio:latest
+    * Port: 9000
+    * References: https://hub.docker.com/r/minio/minio
+  
+* superset (optional): Apache Superset to visualize the data.
+    * Image: apache/superset:latest
+    * Port: 8088
+    * References: https://hub.docker.com/r/apache/superset
+  
 ## Architecture components
 
 ![](./doc/architecture.png "Architecture")
@@ -98,6 +108,14 @@ Jupyter Notebook: http://127.0.0.1:8888
   * For Jupyter notebook, you must copy the URL with the token generated when the container is started and paste in your browser. The URL with the token can be taken from container logs using:
   
         $ docker logs -f docker_jupyter-spark_1
+
+Minio: http://localhost:9001
+* User: root
+* Password: password
+
+Superset: http://localhost:8088
+* User: admin
+* Password: admin
 
 ## How to run a DAG to test
 
