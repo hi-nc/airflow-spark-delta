@@ -83,4 +83,6 @@ spark/resources/data/raw/derived/vehicle_data/*
 notebooks/json_proc/spark-warehouse/*
 spark/resources/data/raw/zipcodes-state-more/*
 spark/resources/data/raw/zipcodes-state/*
+spark/resources/data/raw/parquetfiles/
+spark/resources/data/raw/spark_output/
 .DS_Store
