@@ -228,3 +228,10 @@ More info at: https://github.com/puckel/docker-airflow#build
        * 4.populate_gold.ipynb performs  analytical transformations on the available vehicle data in the delta tables and saves the 
          results in the gold delta table.
     * Audit table will be created/updated for each layer to track the changes in the data.
+
+* Pyspark Learning Series Added
+    * [pyspark_learning_series.ipynb](notebooks/pyspark_learning_series/pyspark_learning_series.ipynb) contains the basic operations of pyspark like creating a dataframe, reading a file, filtering, groupby, join, etc.
+    Resources used:
+    https://sparkbyexamples.com/pyspark-tutorial/
+    https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql.html
+    https://www.youtube.com/playlist?list=PLgPb8HXOGtsQeiFz1y9dcLuXjRh8teQtw  
